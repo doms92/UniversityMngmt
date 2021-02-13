@@ -28,9 +28,8 @@ namespace UniversityMngmt
             AccountBalance = AccBal;
         }
     /// <summary>
-    /// 
+    /// Financial Account Identification Number, Primary Key
     /// </summary>
-    
         [Key]
         public int AccountId { get; set; }
 
@@ -39,8 +38,8 @@ namespace UniversityMngmt
         /// </summary> 
         /// 
         [Required]
-
         public string AccountName { get; set; }
+
         /// <summary>
         /// The account description,
         /// </summary>
