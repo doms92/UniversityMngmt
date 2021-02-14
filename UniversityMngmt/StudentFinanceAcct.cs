@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace UniversityMngmt
 {
-   public class StudentAccount
+   public class StudentFinanceAcct
     {
-        public StudentAccount()
+        public StudentFinanceAcct()
         {
 
         }
@@ -20,16 +20,16 @@ namespace UniversityMngmt
         /// <param name="AccName"></param>
         /// <param name="AccDesc"></param>
         /// <param name="AccBal"></param>
-        public StudentAccount(int AccID, string AccName, string AccDesc, decimal AccBal)
+        public StudentFinanceAcct(int AccID, string AccName, string AccDesc, decimal AccBal)
         {
             AccountId = AccID;
             AccountName = AccName;
             AccountDescription = AccDesc;
             AccountBalance = AccBal;
         }
-    /// <summary>
-    /// Financial Account Identification Number, Primary Key
-    /// </summary>
+        /// <summary>
+        /// Financial Account Identification Number, Primary Key
+        /// </summary>
         [Key]
         public int AccountId { get; set; }
 
