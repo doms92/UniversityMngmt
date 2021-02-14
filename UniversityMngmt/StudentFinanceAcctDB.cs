@@ -46,5 +46,8 @@ public static StudentFinanceAcct Update(StudentFinanceAcct acct)
  /// <summary>
  /// Deletes a financial account from the DB
  /// </summary>
-public static void Delete(StudentFinanceAcct)
+public static void Delete(StudentFinanceAcct acct)
+{
+
+}
 
