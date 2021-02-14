@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityMngmt
 {
+
    public static class StudentFinanceAcctDB
     {
         /// <summary>
@@ -46,8 +47,5 @@ public static StudentFinanceAcct Update(StudentFinanceAcct acct)
  /// <summary>
  /// Deletes a financial account from the DB
  /// </summary>
-public static void Delete(StudentFinanceAcct acct)
-{
-
-}
+public static void Delete(StudentFinanceAcct)
 
