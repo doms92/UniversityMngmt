@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityMngmt
 {
+
    public static class StudentFinanceAcctDB
     {
         /// <summary>
@@ -47,4 +48,17 @@ public static StudentFinanceAcct Update(StudentFinanceAcct acct)
  /// Deletes a financial account from the DB
  /// </summary>
 public static void Delete(StudentFinanceAcct)
+=======
+   public static class StudentAccountDB
+    {
+        public static List<StudentAccount>
+        using (var context = new StudentContext())
+    {
+        List<StudentAccount> acc = (from fa in StudentAccount
+                                    orderby fa.AccountId ascending
+                                    select fa).ToList();
+
+        }
+    }
+
 
