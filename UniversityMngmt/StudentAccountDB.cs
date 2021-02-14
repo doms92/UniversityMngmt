@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniversityMngmt
 {
-    class StudentAccountDB
+   public static class StudentAccountDB
     {
         public static List<StudentAccount>
         using (var context = new StudentContext())
