@@ -26,7 +26,6 @@ namespace UniversityMngmt
             using (var context = new StudentContext())
             {
                 context.StudentFinanceAccts.Add(acct);
-
                 context.SaveChanges();
 
                 return acct;
@@ -40,8 +39,9 @@ namespace UniversityMngmt
         {
             using(var context = new StudentContext()) 
             {
-                context.Entry(acct).State = EntityState.Modified;
+                context.Database.Log = Console.WriteLine;
 
+                context.Entry(acct).State = EntityState.Modified;
                 context.SaveChanges();
 
                 return acct;
@@ -53,7 +53,13 @@ namespace UniversityMngmt
         /// </summary>
         public static void Delete(StudentFinanceAcct acct)
         {
-            throw new NotImplementedException();
+            using(var context = new StudentContext())
+            {
+                context.Database.Log = Console.WriteLine;
+
+                context.Entry(acct).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
     }
 }
