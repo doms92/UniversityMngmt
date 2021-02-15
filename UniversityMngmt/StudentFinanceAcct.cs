@@ -28,10 +28,6 @@ namespace UniversityMngmt
         /// <summary>
         /// Financial Account Identification Number, Primary Key
         /// </summary>
-       
-    /// <summary>
-    /// Financial Account Identification Number, Primary Key
-    /// </summary>
         [Key]
         public int AccountId { get; set; }
 
