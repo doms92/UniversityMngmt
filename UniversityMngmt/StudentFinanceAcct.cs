@@ -10,27 +10,18 @@ namespace UniversityMngmt
 
    public class StudentFinanceAcct
     {
-        public StudentFinanceAcct()
+        /// <summary>
+        /// No Arg Constructor
+        /// </summary>
 
    public class StudentAccount
     {
         public StudentAccount()
-
         {
-
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="AccID"></param>
-        /// <param name="AccName"></param>
-        /// <param name="AccDesc"></param>
-        /// <param name="AccBal"></param>
+    
 
         public StudentFinanceAcct(int AccID, string AccName, string AccDesc, decimal AccBal)
-
-        public StudentAccount(int AccID, string AccName, string AccDesc, decimal AccBal)
-
         {
             AccountId = AccID;
             AccountName = AccName;
@@ -38,14 +29,10 @@ namespace UniversityMngmt
             AccountBalance = AccBal;
         }
 
-        /// <summary>
-        /// Financial Account Identification Number, Primary Key
-        /// </summary>
-
+       
     /// <summary>
     /// Financial Account Identification Number, Primary Key
     /// </summary>
-
         [Key]
         public int AccountId { get; set; }
 
