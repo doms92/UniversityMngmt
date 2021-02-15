@@ -11,11 +11,12 @@ namespace UniversityMngmt
     {
         /// <summary>
         /// Individual student account that holds student financial information
-        /// </summary>
         /// <param name="AccID">The student's account ID</param>
         /// <param name="AccName">The student's account name</param>
         /// <param name="AccDesc"> The account description</param>
         /// <param name="AccBal">The student's account balance</param>
+        /// </summary>
+  
         public StudentFinanceAcct(int AccID, string AccName, string AccDesc, decimal AccBal)
         {
             AccountId = AccID;
@@ -23,17 +24,20 @@ namespace UniversityMngmt
             AccountDescription = AccDesc;
             AccountBalance = AccBal;
         }
-
+     
         /// <summary>
         /// Financial Account Identification Number, Primary Key
         /// </summary>
+       
+    /// <summary>
+    /// Financial Account Identification Number, Primary Key
+    /// </summary>
         [Key]
         public int AccountId { get; set; }
 
         /// <summary>
-        /// The name of the financial account
+        /// The name of the student's financial account
         /// </summary> 
-        /// 
         [Required]
         public string AccountName { get; set; }
 
