@@ -21,7 +21,7 @@ namespace UniversityMngmt
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-        public virtual DbSet<StudentAccount> StudentAccounts { get; set; }
+        public virtual DbSet<StudentFinanceAcct> StudentFinanceAccts { get; set; }
     }
 
     //public class MyEntity
