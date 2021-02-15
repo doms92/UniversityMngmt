@@ -13,13 +13,9 @@ namespace UniversityMngmt
         /// <summary>
         /// No Arg Constructor
         /// </summary>
-
-   public class StudentAccount
-    {
-        public StudentAccount()
+        public StudentFinanceAcct()
         {
         }
-    
 
         public StudentFinanceAcct(int AccID, string AccName, string AccDesc, decimal AccBal)
         {
@@ -37,7 +33,7 @@ namespace UniversityMngmt
         public int AccountId { get; set; }
 
         /// <summary>
-        /// The name of the Financial account
+        /// The name of the Student Financial account
         /// </summary> 
         /// 
         [Required]
