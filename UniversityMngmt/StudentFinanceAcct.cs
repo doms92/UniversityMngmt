@@ -7,30 +7,16 @@ using System.Threading.Tasks;
 
 namespace UniversityMngmt
 {
-
    public class StudentFinanceAcct
     {
-        public StudentFinanceAcct()
-
-   public class StudentAccount
-    {
-        public StudentAccount()
-
-        {
-
-        }
         /// <summary>
-        /// 
+        /// Individual student account that holds student financial information
         /// </summary>
-        /// <param name="AccID"></param>
-        /// <param name="AccName"></param>
-        /// <param name="AccDesc"></param>
-        /// <param name="AccBal"></param>
-
+        /// <param name="AccID">The student's account ID</param>
+        /// <param name="AccName">The student's account name</param>
+        /// <param name="AccDesc"> The account description</param>
+        /// <param name="AccBal">The student's account balance</param>
         public StudentFinanceAcct(int AccID, string AccName, string AccDesc, decimal AccBal)
-
-        public StudentAccount(int AccID, string AccName, string AccDesc, decimal AccBal)
-
         {
             AccountId = AccID;
             AccountName = AccName;
@@ -41,23 +27,18 @@ namespace UniversityMngmt
         /// <summary>
         /// Financial Account Identification Number, Primary Key
         /// </summary>
-
-    /// <summary>
-    /// Financial Account Identification Number, Primary Key
-    /// </summary>
-
         [Key]
         public int AccountId { get; set; }
 
         /// <summary>
-        /// The name of the Financial account
+        /// The name of the financial account
         /// </summary> 
         /// 
         [Required]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// The account description,
+        /// The account description
         /// </summary>
         public string AccountDescription { get; set; }
 
