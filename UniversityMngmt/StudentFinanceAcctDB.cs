@@ -48,9 +48,6 @@ namespace UniversityMngmt
             }
         }
 
-        /// <summary>
-        /// Deletes a financial account from the DB
-        /// </summary>
         public static void Delete(StudentFinanceAcct acct)
         {
             using(var context = new StudentContext())
@@ -58,6 +55,24 @@ namespace UniversityMngmt
                 context.Database.Log = Console.WriteLine;
 
                 context.Entry(acct).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// Deletes student financial account from DB
+        /// </summary>
+        /// <param name="id"></param>
+        public static void Delete(int id) 
+        {
+            using(var context = new StudentContext())
+            {
+                StudentFinanceAcct stuToDelete =
+                    (from p in context.StudentFinanceAccts
+                     where p.AccountId == id
+                     select p).Single();
+
+                context.Entry(stuToDelete).State = EntityState.Deleted;
                 context.SaveChanges();
             }
         }

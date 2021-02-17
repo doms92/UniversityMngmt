@@ -16,5 +16,22 @@ namespace UniversityMngmt
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Student 1
+            var s1 = new StudentFinanceAcct()
+            {
+                AccountName = "Alice Jones",
+                AccountBalance = 1300,
+                AccountDescription = "Balance due"
+            };
+
+            StudentFinanceAcctDB.Add(s1);
+
+            StudentFinanceAcctDB.Delete(s1);
+
+            // Student 2
+        }
     }
 }
