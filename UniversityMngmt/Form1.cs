@@ -27,8 +27,15 @@ namespace UniversityMngmt
                 AccountDescription = "Balance due"
             };
 
+            // Adds new student object
             StudentFinanceAcctDB.Add(s1);
 
+            // Updates information in Student db
+            s1.AccountBalance = 0;
+            s1.AccountDescription = "Balance paid in full";
+            StudentFinanceAcctDB.Update(s1);
+
+            // Deletes student from Student db
             StudentFinanceAcctDB.Delete(s1);
 
             // Student 2
