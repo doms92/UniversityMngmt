@@ -15,7 +15,16 @@ namespace UniversityMngmt
         /// </summary>
         public static List<StudentFinanceAcct> GetAllStudents() 
         {
-            throw new NotImplementedException();
+            using (StudentContext context = new StudentContext())
+            {
+                List<StudentFinanceAcct>allAccts = 
+                    (from acct in context.StudentFinanceAccts
+                     orderby acct.AccountId ascending
+                    select acct).ToList();
+
+                return allAccts;
+            }
+           // throw new NotImplementedException();
         }
 
         /// <summary>
