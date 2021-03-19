@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.BtnAdd = new System.Windows.Forms.Button();
             this.AcctId = new System.Windows.Forms.Label();
             this.AcctBalance = new System.Windows.Forms.Label();
             this.AcctName = new System.Windows.Forms.Label();
@@ -43,26 +43,26 @@
             this.txtBoxDesc = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnDelete
+            // BtnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(982, 160);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(168, 66);
-            this.btnDelete.TabIndex = 0;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.Button1_Click);
+            this.BtnDelete.Location = new System.Drawing.Point(982, 160);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(168, 66);
+            this.BtnDelete.TabIndex = 0;
+            this.BtnDelete.Text = "Delete";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // btnEdit
+            // BtnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(1014, 626);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(136, 46);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Location = new System.Drawing.Point(1014, 626);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(136, 46);
+            this.BtnEdit.TabIndex = 1;
+            this.BtnEdit.Text = "Edit";
+            this.BtnEdit.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
@@ -86,51 +86,51 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "University Management System";
             // 
-            // btnAdd
+            // BtnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(982, 55);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(168, 71);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.BtnAdd.Location = new System.Drawing.Point(982, 55);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(168, 71);
+            this.BtnAdd.TabIndex = 4;
+            this.BtnAdd.Text = "Add";
+            this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // AcctId
             // 
             this.AcctId.AutoSize = true;
             this.AcctId.Location = new System.Drawing.Point(24, 90);
             this.AcctId.Name = "AcctId";
-            this.AcctId.Size = new System.Drawing.Size(116, 25);
+            this.AcctId.Size = new System.Drawing.Size(122, 25);
             this.AcctId.TabIndex = 5;
-            this.AcctId.Text = "Account ID";
+            this.AcctId.Text = "Account ID:";
             // 
             // AcctBalance
             // 
             this.AcctBalance.AutoSize = true;
             this.AcctBalance.Location = new System.Drawing.Point(24, 166);
             this.AcctBalance.Name = "AcctBalance";
-            this.AcctBalance.Size = new System.Drawing.Size(174, 25);
+            this.AcctBalance.Size = new System.Drawing.Size(180, 25);
             this.AcctBalance.TabIndex = 6;
-            this.AcctBalance.Text = "Account Balance";
+            this.AcctBalance.Text = "Account Balance:";
             // 
             // AcctName
             // 
             this.AcctName.AutoSize = true;
             this.AcctName.Location = new System.Drawing.Point(489, 84);
             this.AcctName.Name = "AcctName";
-            this.AcctName.Size = new System.Drawing.Size(152, 25);
+            this.AcctName.Size = new System.Drawing.Size(158, 25);
             this.AcctName.TabIndex = 7;
-            this.AcctName.Text = "Account Name";
+            this.AcctName.Text = "Account Name:";
             // 
             // AcctDesc
             // 
             this.AcctDesc.AutoSize = true;
             this.AcctDesc.Location = new System.Drawing.Point(489, 166);
             this.AcctDesc.Name = "AcctDesc";
-            this.AcctDesc.Size = new System.Drawing.Size(204, 25);
+            this.AcctDesc.Size = new System.Drawing.Size(210, 25);
             this.AcctDesc.TabIndex = 8;
-            this.AcctDesc.Text = "Account Description";
+            this.AcctDesc.Text = "Account Description:";
             // 
             // txtBoxID
             // 
@@ -174,11 +174,11 @@
             this.Controls.Add(this.AcctName);
             this.Controls.Add(this.AcctBalance);
             this.Controls.Add(this.AcctId);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.BtnEdit);
+            this.Controls.Add(this.BtnDelete);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormFinAccManager";
             this.Text = "Accounts Manager";
@@ -190,11 +190,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Label AcctId;
         private System.Windows.Forms.Label AcctBalance;
         private System.Windows.Forms.Label AcctName;
