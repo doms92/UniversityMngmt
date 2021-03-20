@@ -33,6 +33,8 @@ namespace UniversityMngmt
             listView1.Columns.Add("Account Name", 150);
             listView1.Columns.Add("Account Balance", 150);
             listView1.Columns.Add("Account Description", 175);
+            
+           
         }
 
         #region Button Click Section
@@ -53,50 +55,35 @@ namespace UniversityMngmt
             }
         }
 
+       private void Edit()
+        {
+            listView1.SelectedItems[0].SubItems[1].Text = txtBoxName.Text;
+            listView1.SelectedItems[0].SubItems[2].Text = txtBoxBalance.Text;
+            listView1.SelectedItems[0].SubItems[3].Text = txtBoxDesc.Text;
+
+            //Clear Text
+            txtBoxName.Text = "";
+            txtBoxBalance.SelectedText = "";
+            txtBoxDesc.Text = "";
+        }
+        
         /// <summary>
-        /// TODO: Delete button
+        /// Deletes Student Data already added when button is clicked
         /// </summary>
+        /// 
+
+        private void Delete()
+        {
+            if (MessageBox.Show("Sure ??", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)==DialogResult.OK)
+        {
+                listView1.Items.RemoveAt(listView1.SelectedIndices[0]);
+            }
+        }
+
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             // Student 1
-            var s1 = new StudentFinanceAcct()
-            {
-                AccountName = "Alice Jones",
-                AccountBalance = 1300,
-                AccountDescription = "Balance due"
-            };
-
-            // Adds new student object
-            StudentFinanceAcctDB.Add(s1);
-
-            // Updates information in Student db
-            s1.AccountBalance = 0;
-            s1.AccountDescription = "Balance paid in full";
-            StudentFinanceAcctDB.Update(s1);
-
-            // Deletes student from Student db
-            StudentFinanceAcctDB.Delete(s1);
-
-            // Student 2
-            var s2 = new StudentFinanceAcct()
-            {
-                AccountName = "Bruce Wayne",
-                AccountDescription = "Balance due",
-                AccountBalance = 3300
-            };
-            // Adds new student object
-            StudentFinanceAcctDB.Add(s2);
-
-            // Updates information in Student db
-            s2.AccountBalance = 1000;
-            s2.AccountDescription = "Balance overdue";
-            StudentFinanceAcctDB.Update(s2);
-
-            // Deletes student from Student db
-            StudentFinanceAcctDB.Delete(s2);
-
-            // Gets All Student Accts From Student db
-            List<StudentFinanceAcct> accts = StudentFinanceAcctDB.GetAllStudents();
+            Delete();      
         }
         #endregion
 
@@ -157,6 +144,16 @@ namespace UniversityMngmt
 
                 listView1.Items.Add(new ListViewItem(row));
             }
+        }
+
+        /// <summary>
+        /// Edit Student Data when Button is Clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Edit();
         }
     }
 }
